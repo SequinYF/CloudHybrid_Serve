@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+<ol>
+{{/*image是string切片*/}}
+{{range $i, $v := $.files}}
+{{/*对当前元的值进行适合用于HTML显示的字符化*/}}
+        {{range $v}}
+            <li>{{.|html}}</li>
+        {{end}}
+{{end}}
+</ol>
+</body>
+</html>
